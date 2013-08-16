@@ -1,6 +1,6 @@
 INSTAGRAM_CONFIG = {
-  client_id: ENV['INSTAGRAM_CLIENT_ID'] || raise("No instagram client id environment variable"),
-  client_secret: ENV['INSTAGRAM_CLIENT_SECRET'] || raise("No instagram client secret environment variable")
+  client_id: ENV['INSTAGRAM_CLIENT_ID'] || !Rails.logger.error("No instagram client id environment variable"),
+  client_secret: ENV['INSTAGRAM_CLIENT_SECRET'] || !Rails.logger.error("No instagram client secret environment variable")
 }.freeze
 
 Instagram.configure do |config|
