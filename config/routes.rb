@@ -5,5 +5,7 @@ Geogrames::Application.routes.draw do
 
   get "/map" => "maps#index", as: "map"
 
+  resources :photos
+
   root to: "homepage#index"
 end

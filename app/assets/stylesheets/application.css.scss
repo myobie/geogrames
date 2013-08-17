@@ -2,3 +2,33 @@
  *= require_self
  *= require_tree .
  */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.column {
+  height: 100%;
+  width: 46.875%;
+  margin-left: 6.25%;
+}
+
+.map {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+}
+
+nav.search {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  background: white;
+  z-index: 10;
+}

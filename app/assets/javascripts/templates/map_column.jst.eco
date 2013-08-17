@@ -1,0 +1,7 @@
+<nav class="search">
+  <span class="link" data-href="current-location">Current Location</span>
+  <form>
+    <input type="search" placeholder="Search" class="search">
+  </form>
+</nav>
+<div class="map"></div>
