@@ -5,6 +5,10 @@ class @MapView extends Backbone.View
   moveMarker: (latlng) ->
     @marker.setLatLng latlng
     @center latlng
+    @moved latlng
+
+  moved: (latlng) ->
+    console.log "The marker is now at", latlng
 
   setupMap: ->
     if @map
@@ -42,7 +46,9 @@ class @MapView extends Backbone.View
         @marker = e.layer
         @marker.dragging.enable()
         @marker.on "dragend", (e) =>
-          @center @marker.getLatLng()
+          latlng = @marker.getLatLng()
+          @center latlng
+          @moved latlng
 
       @map.markerLayer.setGeoJSON geoJSON
 
